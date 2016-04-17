@@ -1,0 +1,14 @@
+fixtures:
+  symlinks:
+    "splunk": "#{source_dir}"
+
+# spec_helper.rb
+require 'puppetlabs_spec_helper/module_spec_helper'
+
+# Rakefile
+require 'puppetlabs_spec_helper/rake_tasks'
+
+# Gemfile
+gem 'rspec-puppet', '~> 2.1',  :require => false
+gem 'rspec-core', '3.1.7',     :require => false
+

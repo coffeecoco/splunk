@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+set -e
+
+[ -z "${PUPPET_VERSION}" ] && script/bootstrap
+
+gem install rake -v '11.1.2'
+
+bundle exec rspec
+
+bundle exec puppet-lint --with-filename --fail-on-warnings manifests
